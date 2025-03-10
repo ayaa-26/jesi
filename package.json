@@ -1,0 +1,11 @@
+{
+  "name": "jesi",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
