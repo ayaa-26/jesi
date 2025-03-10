@@ -450,3 +450,36 @@
         justify-content: center;
     }
 }
+/* Comité d'Organisation Styles */
+.member-slot {
+    background-color: var(--light-bg);  /* Couleur de fond claire */
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: left;
+    transition: all 0.3s ease;  /* Ajout d'une transition pour l'effet hover */
+}
+
+.member-slot:hover {
+    transform: translateX(5px); /* Légère translation au survol */
+    background-color: #e3f2fd; /* Couleur au survol (vous pouvez ajuster) */
+    border-left: 4px solid var(--accent-color); /* Ajoute une bordure sur le côté au survol */
+}
+
+.role {
+    font-weight: bold;
+    color: var(--secondary-color); /* Utilisation de la couleur secondaire */
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    color: var(--text-color);   /* Utilisation de la couleur de texte */
+}
+
+/* Responsive Design (Adaptation si nécessaire) */
+@media (max-width: 768px) {
+    .member-slot {
+        padding: 1rem;
+    }
+}
