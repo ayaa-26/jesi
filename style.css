@@ -483,199 +483,103 @@ main {
       padding: 1rem;
   }
 }
-/* Add to your existing style.css file */
-
-/* Speaker Section */
-.intervenants-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #f9f9f9;
+/* Home Page Styles */
+.home-page {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 80px auto 0; /* Adapté pour ne pas être masqué par le header fixe */
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: 15px;
 }
 
-.intervenant {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin: 20px;
-    width: 300px;
-    text-align: center;
-    overflow: hidden;
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-.intervenant-photo img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+.hero h1 {
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-.intervenant-info {
-    padding: 15px;
+.hero .subtitle {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
 }
 
-.intervenant-info h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
-    color: #333;
+.organizers {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-.intervenant-info p {
-    color: #777;
-    margin: 5px 0;
+.organizers h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
-.intervenant-topic {
-    background: #f1f1f1;
-    padding: 10px;
-    border-top: 1px solid #ddd;
-    text-align: left;
-}
-
-.intervenant-topic h4 {
-    font-size: 1em;
-    color: #333;
-}
-
-.intervenant-topic p {
-    color: #555;
-    font-size: 0.9em;
-}
-
-.section-header h2 {
-    font-size: 2em;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.footer-container {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer-container h3, .footer-container h4 {
-    color: #fff;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-social .social-links a {
-    color: #fff;
-    margin: 0 5px;
-    font-size: 1.2em;
-}
-/* Add to your existing style.css file */
-
-/* Speaker Section */
-.intervenants-section {
+.organizer-logos {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-  background-color: #f9f9f9;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.intervenant {
-  background: #fff;
-  border: 1px solid #ddd;
+.organizer-logo {
+  height: 100px; /* Ajustez la taille selon vos logos */
+  width: auto;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin: 20px;
-  width: 300px;
-  text-align: center;
-  overflow: hidden;
+  box-shadow: var(--shadow); /* Ombre pour les logos */
+  transition: all 0.3s ease;
 }
 
-.intervenant-photo img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ddd;
+.organizer-logo:hover {
+  transform: scale(1.1); /* Agrandissement au survol */
 }
 
-.intervenant-info {
-  padding: 15px;
-}
-
-.intervenant-info h3 {
-  font-size: 1.2em;
-  margin: 10px 0;
-  color: #333;
-}
-
-.intervenant-info p {
-  color: #777;
-  margin: 5px 0;
-}
-
-.intervenant-topic {
-  background: #f1f1f1;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  text-align: left;
-}
-
-.intervenant-topic h4 {
-  font-size: 1em;
-  color: #333;
-}
-
-.intervenant-topic p {
-  color: #555;
-  font-size: 0.9em;
-}
-
-.section-header h2 {
-  font-size: 2em;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.footer-container {
-  background: #00000000;
-  color: #fff;
-  padding: 20px;
+.organizers .description {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.footer-container h3, .footer-container h4 {
-  color: #fff;
+.energy-paragraph {
+  margin-bottom: 3rem;
+  line-height: 1.8;
 }
 
-.footer-links ul {
-  list-style: none;
-  padding: 0;
+.energy-paragraph h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.footer-links ul li {
-  display: inline;
-  margin: 0 10px;
+.energy-paragraph p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
 }
 
-.footer-links ul li a {
-  color: #fff;
-  text-decoration: none;
-}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .organizer-logos {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 
-.footer-social .social-links a {
-  color: #fff;
-  margin: 0 5px;
-  font-size: 1.2em;
+  .organizer-logo {
+    height: 80px;
+  }
+
+  .organizers .description,
+  .energy-paragraph p {
+    text-align: left;
+  }
 }
