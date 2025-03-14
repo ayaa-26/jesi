@@ -1,0 +1,504 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Header Styles */
+
+
+
+
+/* Styles de base pour le header */
+header {
+    background-color: #ffffff; /* Fond blanc */
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Styles pour la navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Espacement égal entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #2c3e50; /* Couleur de texte sombre */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Couleur de texte au survol */
+    background-color: #f0f0f0; /* Fond légèrement gris au survol */
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        padding: 0.5rem;
+    }
+}
+.filiere-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9; /* Une teinte plus foncée de --secondary */
+}
+/* Section Compétences Visées */
+#competences {
+    padding: 4rem var(--spacing);
+    background-color: var(--light);
+}
+
+#competences h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+.competences-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.competences-column {
+    flex: 1;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.competences-column h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.competences-column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.competences-column ul li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--primary);
+}
+
+.competences-column ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .competences-container {
+        flex-direction: column;
+    }
+
+    .competences-column {
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+main {
+    padding: 1em;
+}
+
+h2 {
+    color: #004080;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+}
+
+.grid {
+    display: flex;
+    gap: 1em;
+}
+
+.column {
+    flex: 1;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.gallery div {
+    flex: 1 1 calc(33.333% - 1em);
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Laboratoires Section */
+#laboratoires {
+    padding: 4rem var(--spacing);
+    background-color: var(--light);
+}
+
+#laboratoires h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.lab-card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lab-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.lab-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--secondary);
+}
+
+.lab-content {
+    padding: 1.5rem;
+}
+
+.lab-content h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.lab-content p {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.lab-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: var(--primary);
+}
+
+.lab-content ul li {
+    margin-bottom: 0.5rem;
+}
+/* Variables CSS */
+:root {
+    --primary: #2c3e50; /* Couleur principale */
+    --secondary: #3498db; /* Couleur secondaire */
+    --light: #ecf0f1; /* Couleur de fond claire */
+    --spacing: 1rem; /* Espacement général */
+    --radius: 8px; /* Rayon des bordures */
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--primary);
+}
+
+/* Section Laboratoires */
+#laboratoires {
+    padding: 4rem var(--spacing);
+    background-color: var(--light);
+}
+
+#laboratoires h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+/* Grille des laboratoires */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Carte de laboratoire */
+.lab-card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lab-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image du laboratoire */
+.lab-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--secondary);
+}
+
+/* Contenu de la carte */
+.lab-content {
+    padding: 1.5rem;
+}
+
+.lab-content h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.lab-content p {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.lab-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: var(--primary);
+}
+
+.lab-content ul li {
+    margin-bottom: 0.5rem;
+}
+/* Section Partenariats */
+#partenariats {
+    padding: 4rem var(--spacing);
+    background-color: var(--light);
+}
+
+#partenariats h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+/* Tableau des partenariats */
+.table-wrapper {
+    overflow-x: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius);
+    background: white;
+}
+
+.partenariats-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.partenariats-table th,
+.partenariats-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.partenariats-table th {
+    background-color: var(--secondary);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.partenariats-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.partenariats-table ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.partenariats-table ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .partenariats-table th,
+    .partenariats-table td {
+        padding: 1rem;
+    }
+
+    .partenariats-table th {
+        font-size: 0.8rem;
+    }
+}
+/* Section Source PDF */
+#source-pdf {
+    padding: 4rem var(--spacing);
+    background-color: var(--light);
+    text-align: center;
+}
+
+#source-pdf h2 {
+    margin-bottom: 1rem;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+#source-pdf p {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.pdf-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-link:hover {
+    background-color: #2980b9; /* Une teinte plus foncée de --secondary */
+}
+/* Styles pour le menu déroulant personnalisé */
+.custom-select {
+    position: relative;
+    width: 200px; /* Largeur du menu déroulant */
+    margin-bottom: 1rem;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--secondary);
+    border-radius: var(--radius);
+    background-color: white;
+    appearance: none; /* Supprime le style par défaut du navigateur */
+    cursor: pointer;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none; /* Empêche l'icône de bloquer les clics */
+    color: var(--secondary);
+    font-size: 0.8rem;
+}
+
+/* Effet au survol */
+.filter-select:hover {
+    border-color: #2980b9; /* Une teinte plus foncée de --secondary */
+}
+
+/* Effet lorsque le menu est ouvert */
+.filter-select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}

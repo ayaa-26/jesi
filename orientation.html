@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme Académique - ENSA Fès</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+            --spacing: 1rem;
+            --radius: 8px;
+        }
+
+        /* Reset et base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui;
+            line-height: 1.6;
+            color: var(--primary);
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: var(--primary);
+            padding: 1rem;
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Sections génériques */
+        section {
+            padding: 4rem var(--spacing);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+            color: var(--secondary);
+            text-align: center;
+        }
+
+        /* Tableaux interactifs */
+        .table-wrapper {
+            overflow-x: auto;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: var(--radius);
+        }
+
+        .interactive-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .interactive-table th,
+        .interactive-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .filter-controls {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Grille pédagogique */
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Galerie laboratoires */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .lab-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-list {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+
+<header>
+    <div class="header-container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="orientation.html">Orientation</a></li>
+                <li><a href="#">Compétition</a></li>  
+                <li><a href="comite.html">Comité d'Organisation</a></li>
+                <li><a href="intervenants.html">Intervenants</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Ajoutez votre logo ici si vous ne l'avez pas déjà fait -->
+</header>
+
+
+
+
+
+<!-- Section À Propos de la Filière -->
+<section id="apropos-filiere">
+    <div class="apropos-container">
+        <h2>À Propos de la Filière</h2>
+        <p>
+            La filière <strong>Génie Energétique et Systèmes Intelligents</strong> de l'ENSA Fès forme des ingénieurs capables de concevoir, optimiser et gérer des systèmes énergétiques innovants et intelligents. 
+            À travers un programme académique rigoureux et des partenariats stratégiques, nous préparons nos étudiants à relever les défis énergétiques de demain, en intégrant les technologies de pointe et les énergies renouvelables.
+        </p>
+        <p>
+            Nos diplômés sont prêts à exceller dans des secteurs variés, tels que l'industrie, les services publics, et la recherche, en apportant des solutions durables et intelligentes aux enjeux énergétiques mondiaux.
+        </p>
+    </div>
+</section>
+
+  
+<!-- Section Compétences Visées -->
+<section id="competences">
+    <h2>Compétences Visées</h2>
+    <div class="competences-container">
+        <div class="competences-column">
+            <h3>Compétences Techniques</h3>
+            <ul>
+                <li> Aptitudes à mobiliser et à maîtriser les <strong>phases d'analyse</strong>, de <strong>modélisation</strong>, de <strong>simulation</strong>, de <strong>conception</strong> et de <strong>test</strong> d'un système intégrant l’énergétique, l’ERs.</li>
+                <li> Maîtriser les outils intelligents, l’électronique et l’informatique.</li>
+                <li> Appliquer et maîtriser l'ingénierie des besoins et des exigences.</li>
+                <li> Maîtriser les bases nécessaires des bilans énergétiques.</li>
+                <li> Maîtriser les interfaces liées à l'utilisation conjointe de l'électronique, de l'automatique, de l'informatique industrielle, énergétique et système intelligent.</li>
+                <li> Comprendre la chaîne de traitement de l'information, du phénomène physique au pilotage de l'action.</li>
+                <li> Maîtriser la modélisation et le déploiement d'algorithmes de traitement sur un système embarqué.</li>
+            </ul>
+        </div>
+        <div class="competences-column">
+            <h3>Compétences Transversales</h3>
+            <ul>
+                <li> Maîtriser les <strong>méthodes</strong> et les outils de l'ingénieur.</li>
+                <li> Capacité à <strong>s'intégrer</strong> dans une organisation, à l'animer et à la faire évoluer.</li>
+                <li> <strong>Conduite</strong> des projets complexes et maîtrise des méthodes de coordination d'une équipe dans un contexte interdisciplinaire.</li>
+                <li> Prise en compte des <strong>enjeux industriels</strong>, économiques et professionnels.</li>
+                <li> Aptitude à <strong>travailler</strong> dans un <strong>contexte international</strong>.</li>
+                <li> Savoir <strong>s'adapter</strong> au changement technologique et sociétal.</li>
+                <li> Être capable de prendre en considération des <strong>éléments environnementaux</strong> (développement durable, éthique).</li>
+                <li> Connaître les processus de <strong>créativité et d'innovation</strong>.</li>
+                <li> Capacité à opérer ses choix professionnels et à s'insérer dans la vie professionnelle en maîtrisant <strong>les power skills et les langues vivantes</strong>.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+ <main>
+
+
+<!-- Section Programme Académique -->
+<section id="programme">
+    <h2>Programme Académique</h2>
+    <div class="filter-controls">
+        <div class="custom-select">
+            <select id="semesterFilter" class="filter-select">
+                <option value="all">Tous les semestres</option>
+                <option value="S1" >Semestre 1</option>
+                <option value="S2">Semestre 2</option>
+                <option value="S3">Semestre 3</option>
+                <option value="S4">Semestre 4</option>
+                <option value="S5">Semestre 5</option>
+                <option value="S6">Semestre 6</option>
+            </select>
+            <span class="custom-arrow">▼</span>
+        </div>
+    </div>
+    <div class="table-wrapper">
+        <table class="interactive-table">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Intitulé</th>
+                    <th>Crédits</th>
+                    <th>Catégorie</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Modules du Semestre 1 -->
+                <tr data-semester="S1">
+                    <td>M111</td>
+                    <td>Outils de Calcul et de Simulation</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S1">
+                    <td>M112</td>
+                    <td>Transferts de Chaleur et de Masse</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S1">
+                    <td>M113</td>
+                    <td>Traitement du Signal et Automatique</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S1">
+                    <td>M114</td>
+                    <td>Machines Électriques</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S1">
+                    <td>M115</td>
+                    <td>Mécanique des Fluides et Matériaux</td>
+                    <td>4</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S1">
+                    <td>M116</td>
+                    <td>Langues Étrangères 1</td>
+                    <td>3</td>
+                    <td>Langues</td>
+                </tr>
+                <tr data-semester="S1">
+                    <td>M117</td>
+                    <td>Digital & Information Skills</td>
+                    <td>3</td>
+                    <td>Power Skills</td>
+                </tr>
+
+                <!-- Modules du Semestre 2 -->
+                <tr data-semester="S2">
+                    <td>M121</td>
+                    <td>Thermodynamique Appliquée</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S2">
+                    <td>M122</td>
+                    <td>Hydraulique Industrielle</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S2">
+                    <td>M123</td>
+                    <td>Électronique et Commandes Avancées</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S2">
+                    <td>M124</td>
+                    <td>Simulation des Systèmes Multiphysiques</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S2">
+                    <td>M125</td>
+                    <td>Systèmes Embarqués 1</td>
+                    <td>4</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S2">
+                    <td>M126</td>
+                    <td>Langues Étrangères 2</td>
+                    <td>3</td>
+                    <td>Langues</td>
+                </tr>
+                <tr data-semester="S2">
+                    <td>M127</td>
+                    <td>Gestion Comptable</td>
+                    <td>3</td>
+                    <td>Power Skills</td>
+                </tr>
+
+                <!-- Modules du Semestre 3 -->
+                <tr data-semester="S3">
+                    <td>M231</td>
+                    <td>Énergie Solaire</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S3">
+                    <td>M232</td>
+                    <td>Froid Industriels et Échangeurs Thermiques</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S3">
+                    <td>M233</td>
+                    <td>Logiciels Embarqués</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S3">
+                    <td>M234</td>
+                    <td>Électronique de Puissance et Commande des Machines</td>
+                    <td>3</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S3">
+                    <td>M235</td>
+                    <td>Analyse de Données et Machine Learning</td>
+                    <td>4</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S3">
+                    <td>M236</td>
+                    <td>Langues Étrangères 3</td>
+                    <td>3</td>
+                    <td>Langues</td>
+                </tr>
+                <tr data-semester="S3">
+                    <td>M237</td>
+                    <td>Artificial Intelligence Skills</td>
+                    <td>3</td>
+                    <td>Power Skills</td>
+                </tr>
+
+                <!-- Modules du Semestre 4 -->
+                <tr data-semester="S4">
+                    <td>M241</td>
+                    <td>Mécanique des Fluides Avancée</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S4">
+                    <td>M242</td>
+                    <td>Énergétique Industrielle</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S4">
+                    <td>M243</td>
+                    <td>Systèmes Embarqués 2</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S4">
+                    <td>M244</td>
+                    <td>Efficacité et Audit Énergétique</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S4">
+                    <td>M245</td>
+                    <td>Énergie Éolienne, Hydroélectrique et Stockage d’Énergie</td>
+                    <td>4</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S4">
+                    <td>M246</td>
+                    <td>Langues Étrangères 4</td>
+                    <td>3</td>
+                    <td>Langues</td>
+                </tr>
+                <tr data-semester="S4">
+                    <td>M247</td>
+                    <td>Marketing et GRH</td>
+                    <td>3</td>
+                    <td>Power Skills</td>
+                </tr>
+
+                <!-- Modules du Semestre 5 -->
+                <tr data-semester="S5">
+                    <td>M241</td>
+                    <td>Mécanique des Fluides Avancée</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S5">
+                    <td>M242</td>
+                    <td>Énergétique Industrielle</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S5">
+                    <td>M243</td>
+                    <td>Systèmes Embarqués 2</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S5">
+                    <td>M244</td>
+                    <td>Efficacité et Audit Énergétique</td>
+                    <td>5</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S5">
+                    <td>M245</td>
+                    <td>Énergie Éolienne, Hydroélectrique et Stockage d’Énergie</td>
+                    <td>4</td>
+                    <td>Discipline</td>
+                </tr>
+                <tr data-semester="S5">
+                    <td>M246</td>
+                    <td>Langues Étrangères 4</td>
+                    <td>3</td>
+                    <td>Langues</td>
+                </tr>
+                <tr data-semester="S5">
+                    <td>M247</td>
+                    <td>Marketing et GRH</td>
+                    <td>3</td>
+                    <td>Power Skills</td>
+                </tr>
+
+                <!-- Modules du Semestre 6 -->
+                <tr data-semester="S6">
+                    <td>PFE</td>
+                    <td>Projet de Fin d’Étude</td>
+                    <td>20</td>
+                    <td>Projet</td>
+                </tr>
+                <tr data-semester="S6">
+                    <td>S121</td>
+                    <td>Stage Ouvrier</td>
+                    <td>5</td>
+                    <td>Stage</td>
+                </tr>
+                <tr data-semester="S6">
+                    <td>S241</td>
+                    <td>Stage Technique</td>
+                    <td>5</td>
+                    <td>Stage</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+    </section>
+
+        <!-- Conditions d'Admission -->
+        <section id="admission">
+            <h2>Conditions d'Admission</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Diplômes Requis</h3>
+                    <ul>
+                        <li>DEUST Domaine Scientifique</li>
+                        <li>Licence SMP/SMA</li>
+                        <li>Diplôme équivalent reconnu</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Prérequis Pédagogiques</h3>
+                    <ul>
+                        <li>Mathématiques niveau Licence</li>
+                        <li>Physique fondamentale</li>
+                        <li>Connaissances en informatique</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Processus de Sélection</h3>
+                    <ul>
+                        <li>Examen du dossier académique</li>
+                        <li>Entretien oral</li>
+                        <li>Test écrit (Maths/Physique)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Débouchés Professionnels -->
+        <section id="debouches">
+            <h2>Débouchés Professionnels</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Secteur Public</h3>
+                    <ul>
+                        <li>Office National de l'Électricité (ONE)</li>
+                        <li>Agences énergétiques nationales</li>
+                        <li>Ministère de l'Énergie</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Secteur Industriel</h3>
+                    <ul>
+                        <li>Smart Grids</li>
+                        <li>Aéronautique</li>
+                        <li>Industrie automobile</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Consulting en énergie</li>
+                        <li>Audit énergétique</li>
+                        <li>Gestion de projets</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+<!-- Section Partenariats -->
+<section id="partenariats">
+    <h2>Partenariats</h2>
+    <div class="table-wrapper">
+        <table class="partenariats-table">
+            <thead>
+                <tr>
+                    <th>Institution Partenaire</th>
+                    <th>Nature de la Convention</th>
+                    <th>Modalités de Sélection</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Partenariat 1 -->
+                <tr>
+                    <td>Université du Mans (École Nationale Supérieure des Ingénieurs du Mans)</td>
+                    <td>
+                        <ul>
+                            <li>Convention de double diplomatie</li>
+                            <li>Accueil d'étudiants</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Sélection basée sur le dossier académique, la motivation et les compétences en langues.</li>
+                            <li>Classement des candidats par l'établissement d'origine.</li>
+                            <li>Décision finale par l'établissement d'accueil.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <!-- Partenariat 2 -->
+                <tr>
+                    <td>Université du Littoral Côte d'Opale (École d'Ingénieurs du Littoral Côte d'Opale)</td>
+                    <td>
+                        <ul>
+                            <li>Convention d'application pour un double diplôme</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Recrutement des élèves ingénieurs en France et au Maroc selon les exigences des deux établissements.</li>
+                            <li>Jury commun de sélection et d'admission composé d'enseignants et de responsables pédagogiques.</li>
+                            <li>Chaque institution propose une liste de candidats à l'institution d'accueil.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+        <!-- Section Équipe Pédagogique -->
+<section id="equipe">
+    <h2>Équipe Pédagogique</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Pr. CHALH ZAKARIA</h3>
+        </div>
+        <div class="card">
+            <h3>Pr. HIHI HICHAM</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. CHAIBI YASSINE</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. OUHAIBI SALMA</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. EL AFOU YOUSSEF</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. EL HAINI JAMILA</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. MRABTI MOSTAFA</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. EL HAMMAMI YOUNESS</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. OUAHI MOHAMED</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. BOULAICH MOHAMMED ALI</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. SANAE NASRI</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. SALHI Mohamed</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. EL KHATTABI SQUAD</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. ALLA LHOUSSAINE</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. FEKAK FATIMAEZZAHRA</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. ACHRAF AKAABOUNE</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. ACHAHBAR ASMAE</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. SAYYOURI MHAMED</h3>
+        </div>
+
+        <div class="card">
+            <h3>Pr. REDA SCHIR</h3>
+        </div>
+
+
+
+        <div class="card">
+            <h3>Pr. KHAISSIDI GHIZLANE</h3>
+        </div>
+    </div>
+</section>
+        
+
+
+<!-- Section Laboratoires -->
+<section id="laboratoires">
+    <h2>Laboratoires</h2>
+    <div class="gallery">
+        <!-- Laboratoire d'électrotechnique et d'électronique de puissance -->
+        <div class="lab-card">
+            <div class="lab-image">
+                <img src="images./lab-electrotechnique.jpg" alt="Laboratoire d'électrotechnique et d'électronique de puissance">
+            </div>
+            <div class="lab-content">
+                <h3>Laboratoire d'électrotechnique et d'électronique de puissance</h3>
+                <p>Équipements disponibles :</p>
+                <ul>
+                    <li>Moteur asynchrone triphasé à cage</li>
+                    <li>Hacheur / onduleur à IGBT</li>
+                    <li>Redresseur et condensateurs de filtrage</li>
+                    <li>Dynamomètre/alimentation à quatre quadrants</li>
+                    <li>Interface d’acquisition et de contrôle de données</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Laboratoire d'énergétique et ERs -->
+        <div class="lab-card">
+            <div class="lab-image">
+                <img src="images./lab-energetique.jpg" alt="Laboratoire d'énergétique et ERs">
+            </div>
+            <div class="lab-content">
+                <h3>Laboratoire d'énergétique et ERs</h3>
+                <p>Équipements disponibles :</p>
+                <ul>
+                    <li>Système de Stockage</li>
+                    <li>Système éolien</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Laboratoire de Mécatronique, d’Automatique et de Robotique -->
+        <div class="lab-card">
+            <div class="lab-image">
+                <img src="images./lab-mecatronique.jpg" alt="Laboratoire de Mécatronique, d’Automatique et de Robotique">
+            </div>
+            <div class="lab-content">
+                <h3>Laboratoire de Mécatronique, d’Automatique et de Robotique</h3>
+                <p>Équipements disponibles :</p>
+                <ul>
+                    <li>Capteurs industriels</li>
+                    <li>Régulation industrielle</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Laboratoire d’automatisme, Automatique et info inclus -->
+        <div class="lab-card">
+            <div class="lab-image">
+                <img src="images./lab-automatisme.jpg" alt="Laboratoire d’automatisme, Automatique et info inclus">
+            </div>
+            <div class="lab-content">
+                <h3>Laboratoire d’automatisme, Automatique et info inclus</h3>
+                <p>Équipements disponibles :</p>
+                <ul>
+                    <li>Module d’emmagasinage des pièces prismatiques</li>
+                    <li>Module bande transporteuse</li>
+                    <li>Chaîne industrielle pneumatique</li>
+                    <li>Module de mesure de l’épaisseur des pièces</li>
+                    <li>Module de pesage</li>
+                    <li>Module d’emmagasinage à contrôle cartésien</li>
+                    <li>Module de test et de sélection de pièces</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Source PDF -->
+<section id="source-pdf">
+    <h2>Source</h2>
+    <p>
+        Pour plus d'informations, vous pouvez consulter le document PDF suivant :
+    </p>
+    <a href="GESI.pdf" download="Filiere_Genie_Energetique_Systemes_Intelligents.pdf" class="pdf-link">
+        Télécharger le PDF
+    </a>
+</section>
+
+    </main>
+
+    <script>
+        // Filtrage des modules par semestre
+        document.getElementById('semesterFilter').addEventListener('change', function(e) {
+            const semester = e.target.value;
+            document.querySelectorAll('#programme tbody tr').forEach(tr => {
+                tr.style.display = (semester === 'all' || tr.dataset.semester === semester) ? '' : 'none';
+            });
+        });
+    </script>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#programme" class="nav-link">Programme</a></li>
+                <li><a href="#admission" class="nav-link">Admission</a></li>
+                <li><a href="#debouches" class="nav-link">Débouchés</a></li>
+                <li><a href="#partenariats" class="nav-link">Partenariats</a></li>
+                <li><a href="#equipe" class="nav-link">Équipe Pédagogique</a></li>
+                <li><a href="#laboratoires" class="nav-link">Laboratoires</a></li>
+            </ul>
+        </nav>
+</body>
+</html>
