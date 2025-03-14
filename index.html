@@ -3,56 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JESI 2025 - Journée Énergétique et Systèmes Intelligents</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>JESI'2025 - Compétition d'Innovation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            color: #38b6ff;
+            font-size: 32px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin: 0 15px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #38b6ff;
+        }
+
+        .section-content {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #38b6ff;
+        }
+
+        .section-content p {
+            margin-bottom: 15px;
+        }
+
+        .learn-more, .conditions-button {
+            cursor: pointer;
+            display: inline-block;
+            background-color: #38b6ff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .hidden-content {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .criteria ul, .conditions-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .criteria li, .conditions-content li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .criteria li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+
+        .awards-box {
+            border-left: 3px solid #ff7b00;
+            padding: 10px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 3px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-
     <header>
-        <div class="header-container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="programme.html">Programme</a></li>
-                    <li><a href="#">Compétition</a></li> <!-- Lien vers la page compétition (à créer si elle n'existe pas) -->
-                    <li><a href="comite.html">Comité d'Organisation</a></li>
-                    <li><a href="intervenants.html">Intervenants</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- Ajoutez votre logo ici si vous ne l'avez pas déjà fait -->
+        <span>Join the</span>
+        <span class="logo">JESI'2025</span>
+        <span>Competition!</span>
     </header>
 
-    <main class="home-page">
-        <section class="hero">
-            <h1>JESI 2025</h1>
-            <p class="subtitle">Journée Énergétique et Systèmes Intelligents</p>
-        </section>
+    <div class="image-container">
+        <img src="images/image.jpg" alt="Image de la compétition JESI'2025">
+    </div>
 
-        <section class="organizers">
-            <h2>Organisée par</h2>
-            <div class="organizer-logos">
-                <img src="images./ensaf-logo.png" alt="ENSA Fès" class="organizer-logo">
-                <img src="images./powerup-logo.png" alt="Club Power Up" class="organizer-logo">
-                <img src="images./fsdmf-logo.png" alt="Faculté FSDM" class="organizer-logo">
+    <!-- Nouvelle section : Innovation Challenge -->
+    <div class="section-content">
+        <h2>Innovation Challenge</h2>
+        <p>Dans le cadre de la Journée ‘Énergétique et Systèmes Intelligents’ JESI’2025, l’École Nationale des Sciences Appliquées de Fès organise une compétition au profit des jeunes étudiants et chercheurs Marocains et Étrangers.</p>
+    </div>
+
+    <!-- Section : Objectifs de la compétition -->
+    <div class="section-content">
+        <h2>Objectifs de la compétition</h2>
+        <p>Encourager et récompenser les projets innovants qui explorent des solutions concrètes aux défis actuels dans le secteur de l'énergie, en intégrant les nouvelles technologies, la digitalisation et la domotique.</p>
+        <p>Les idées peuvent s'appliquer à divers domaines (habitat intelligent, mobilité, gestion énergétique, etc.), afin de créer un impact transversal sur l'ensemble des secteurs.</p>
+
+        <div class="learn-more" onclick="toggleContent()">Learn More</div>
+
+        <div id="hiddenContent" class="hidden-content">
+            <p>La compétition vise à promouvoir des solutions novatrices qui répondent aux défis énergétiques actuels et futurs. Les participants sont encouragés à présenter des projets qui combinent innovation technologique, faisabilité pratique et impact sociétal positif.</p>
+            <p>Les meilleures idées seront non seulement récompensées lors de la cérémonie de remise des prix, mais pourront également bénéficier d'un accompagnement pour leur développement futur.</p>
+
+            <div class="criteria">
+                <h3>Critères d'évaluation</h3>
+                <ul>
+                    <li>Innovation et originalité</li>
+                    <li>Faisabilité technique et impact potentiel sur plusieurs secteurs</li>
+                    <li>Clarté et qualité de la présentation</li>
+                    <li>Pertinence par rapport aux enjeux de la digitalisation, de la domotique et de l'optimisation énergétique</li>
+                </ul>
             </div>
-            <p class="description">
-                JESI 2025 est une initiative conjointe de l'Ecole Nationale des Sciences Appliquées de Fes, du club Power Up, et de l'université Sidi Mohammed Ben Abdellah  Fès.
-            </p>
-        </section>
 
-        <section class="energy-paragraph">
-            <h2>L'Énergie et les Systèmes Intelligents</h2>
-            <p>
-                Dans un monde en constante évolution, la maîtrise de l'énergie et son optimisation grâce aux systèmes intelligents sont devenues des enjeux cruciaux. JESI 2025 vise à explorer les synergies entre ces deux domaines, en mettant en lumière les innovations et les solutions pour un avenir durable. Les systèmes intelligents, grâce à l'analyse de données et à l'automatisation, permettent une gestion plus efficace de l'énergie, réduisant ainsi notre empreinte environnementale et ouvrant la voie à de nouvelles opportunités économiques.
-            </p>
-        </section>
-    </main>
+            <div class="awards">
+                <h3>Remise des prix</h3>
+                <div class="awards-box">
+                    <p>Les meilleurs projets seront récompensés lors d'une cérémonie officielle organisée à l'ENSA de Fès</p>
+                    <p><strong>Date :</strong> Vendredi 21 Avril 2025</p>
+                    <p><strong>Lieu :</strong> École Nationale des Sciences Appliquées - Fès</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <!-- (Contenu de votre footer, comme sur votre index.html) -->
-    </footer>
+    <!-- Section : Ready to Compete -->
+    <div class="section-content">
+        <h2>Ready to Compete?</h2>
+        <p>Ne manquez pas cette incroyable opportunité de mettre en valeur vos compétences et de résonner avec des leaders de l’industrie. Inscrivez-vous dès maintenant et prenez part à la compétition JESI'2025 !</p>
 
+        <div class="conditions-button" onclick="toggleConditions()">Conditions de participation</div>
+
+        <div id="conditionsContent" class="hidden-content">
+            <p>Toute personne intéressée doit soumettre sa candidature en renseignant le formulaire ci-après, au plus tard le 15 Avril 2025.</p>
+            <p><strong>Lien :</strong> <a href="https://forms.gle/cdY2XMarcJ12VDR38" target="_blank">https://forms.gle/cdY2XM4nzcJ12VDR38</a></p>
+
+            <h3>Modalités de participation :</h3>
+            <ul>
+                <li><strong>Qui peut participer ?</strong>
+                    <ul>
+                        <li>Étudiants, chercheurs, start-ups et professionnels passionnés par l'innovation dans le domaine énergétique, électrique et ses applications transversales.</li>
+                    </ul>
+                </li>
+                <li><strong>Format de présentation</strong>
+                    <ul>
+                        <li>Pitch oral de 5 à 10 minutes accompagné d'une présentation visuelle (diaporama, démonstration, prototype, etc.).</li>
+                        <li>Possibilité d'intégrer une démonstration en réalité augmentée ou via une application interactive.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="participate">
+        « Participez et partagez vos idées ! »
+    </div>
+
+    <div style="margin-top: 20px;">
+        <a href="https://forms.gle/cdY2XMarcJ12VDR38" class="btn">Register Now</a>
+    </div>
+
+    <script>
+        function toggleContent() {
+            var content = document.getElementById("hiddenContent");
+            var learnMoreButton = document.querySelector(".learn-more");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                learnMoreButton.textContent = "Learn More";
+            } else {
+                content.style.display = "block";
+                learnMoreButton.textContent = "Show Less";
+            }
+        }
+
+        function toggleConditions() {
+            var content = document.getElementById("conditionsContent");
+            var conditionsButton = document.querySelector(".conditions-button");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                conditionsButton.textContent = "Conditions de participation";
+            } else {
+                content.style.display = "block";
+                conditionsButton.textContent = "Masquer les conditions";
+            }
+        }
+    </script>
 </body>
 </html>
