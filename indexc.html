@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JESI'2025 - Compétition d'Innovation</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers votre style.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Lien vers Font Awesome -->
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -101,17 +103,46 @@
             color: #333;
             font-size: 14px;
         }
+        .hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.7), rgba(33, 150, 243, 0.4)); /* Dégradé bleu profond vers accent bleu */
+  padding: 4rem 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  color: white;
+}
+
+.hero h1,
+.hero .subtitle,
+.hero .countdown {
+  color: white;
+}
     </style>
 </head>
 <body>
     <header>
-        <span>Join the</span>
-        <span class="logo">JESI'2025</span>
-        <span>Competition!</span>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images./powerup-logo.png" alt="Logo Energétique et Systèmes Intelligents">
+                <div class="logo-text">
+                    JESI <br>
+                    2025
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="programme.html"><i class="fas fa-calendar-alt"></i> Programme</a></li>
+                    <li><a href="comite.html"><i class="fas fa-users"></i> Comité d'Organisation</a></li>
+                    <li><a href="intervenants.html"><i class="fas fa-users"></i> Intervenants</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="image-container">
-        <img src="images/image.jpg" alt="Image de la compétition JESI'2025">
+        <img src="img comp.jpg" alt="Image de la compétition JESI'2025">
     </div>
 
     <!-- Nouvelle section : Innovation Challenge -->
