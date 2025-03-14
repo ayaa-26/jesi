@@ -364,96 +364,6 @@ transition: background-color 0.3s ease;
 .contact-form button:hover {
 background-color: var(--secondary-color);
 }
-/* Footer Styles */
-.site-footer {
-background: var(--primary-color);
-color: var(--white);
-padding: 3rem 0;
-}
-
-.footer-container {
-max-width: 1200px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 2rem;
-padding: 0 2rem;
-}
-
-.footer-info h3 {
-font-size: 1.5rem;
-margin-bottom: 1rem;
-}
-
-.footer-links h4,
-.footer-contact h4,
-.footer-social h4 {
-font-size: 1.2rem;
-margin-bottom: 1rem;
-}
-
-.footer-links ul {
-list-style: none;
-padding: 0;
-}
-
-.footer-links a,
-.footer-contact p,
-.footer-contact a {
-color: var(--white);
-text-decoration: none;
-display: block;
-margin-bottom: 0.5rem;
-transition: color 0.3s ease;
-}
-
-.footer-links a:hover,
-.footer-contact a:hover {
-color: var(--accent-color);
-}
-
-.footer-contact i {
-margin-right: 0.5rem;
-color: var(--accent-color);
-}
-
-.social-links {
-display: flex;
-gap: 1rem;
-}
-
-.social-links a {
-color: var(--white);
-font-size: 1.2rem;
-transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-color: var(--accent-color);
-}
-
-.footer-bottom {
-text-align: center;
-padding: 1rem;
-background: rgba(0, 0, 0, 0.1);
-color: var(--white);
-}
-
-/* Responsive Footer */
-@media (max-width: 768px) {
-.footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-}
-
-.footer-info {
-    margin-bottom: 2rem;
-}
-
-.social-links {
-    justify-content: center;
-}
-}
 /* Comité d'Organisation Styles */
 .member-slot {
 background-color: var(--light-bg);  /* Couleur de fond claire */
@@ -645,7 +555,112 @@ nav a:hover {
   background: var(--accent-color);
   color: var(--white);
 }
-/* Ajout de la nouvelle partie */
+/* Intervenants Styles (Version Améliorée) */
+/* Intervenants Styles (Titre en Haut, Deux par Deux, Images Améliorées) */
+/* Intervenants Styles (Titre en Haut, Deux par Deux) */
+.intervenants-section {
+padding: 3rem 2rem;
+max-width: 1200px;
+margin: 80px auto 0;
+background-color: var(--white);
+box-shadow: var(--shadow);
+border-radius: 15px;
+}
+
+.intervenants-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around; /* Aligner à gauche pour le titre */
+}
+
+.intervenant-card {
+width: 300px; /* Ajustez la valeur selon vos préférences */
+margin: 1rem;
+background-color: var(--light-bg);
+border-radius: 10px;
+box-shadow: var(--shadow);
+overflow: hidden;
+text-align: center;
+}
+
+.intervenant-photo {
+height: 200px; /* Ajustez la valeur selon vos préférences */
+overflow: hidden;
+margin-bottom: 1rem;
+}
+
+.intervenant-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+display: block;
+}
+
+.intervenant-info {
+padding: 1rem;
+text-align: left;
+}
+
+.intervenant-info h3 {
+color: var(--primary-color);
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+}
+
+.intervenant-info p.position {
+color: var(--secondary-color);
+font-style: italic;
+margin-bottom: 1rem;
+font-size: 0.9rem;
+}
+
+.intervenant-info .learn-more {
+background-color: var(--accent-color);
+color: var(--white);
+padding: 0.5rem 1rem;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+text-decoration: none;
+font-size: 0.9rem;
+transition: background-color 0.3s ease;
+}
+
+.intervenant-info .learn-more:hover {
+background-color: var(--secondary-color);
+}
+
+.intervenant-topic {
+padding: 1rem;
+background-color: var(--white);
+border-top: 3px solid var(--accent-color);
+margin-top: 1rem;
+text-align: left;
+}
+
+.intervenant-topic h4 {
+color: var(--secondary-color);
+margin-bottom: 0.5rem;
+}
+
+.intervenant-topic p {
+color: var(--text-color);
+font-size: 0.9em;
+line-height: 1.4;
+}
+
+.intervenant-topic.hidden {
+display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.intervenant-card {
+    width: 100%; /* Une seule carte par ligne sur les petits écrans */
+}
+}
+/*Ajout de la nouvelle partie*/
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -756,109 +771,4 @@ button {
 .rules {
   background-color: var(--warning);
   color: var(--white);
-}
-/* Intervenants Styles (Version Améliorée) */
-/* Intervenants Styles (Titre en Haut, Deux par Deux, Images Améliorées) */
-/* Intervenants Styles (Titre en Haut, Deux par Deux) */
-.intervenants-section {
-  padding: 3rem 2rem;
-  max-width: 1200px;
-  margin: 80px auto 0;
-  background-color: var(--white);
-  box-shadow: var(--shadow);
-  border-radius: 15px;
-}
-
-.intervenants-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* Aligner à gauche pour le titre */
-}
-
-.intervenant-card {
-  width: 300px; /* Ajustez la valeur selon vos préférences */
-  margin: 1rem;
-  background-color: var(--light-bg);
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  text-align: center;
-}
-
-.intervenant-photo {
-  height: 200px; /* Ajustez la valeur selon vos préférences */
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
-.intervenant-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-.intervenant-info {
-  padding: 1rem;
-  text-align: left;
-}
-
-.intervenant-info h3 {
-  color: var(--primary-color);
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.intervenant-info p.position {
-  color: var(--secondary-color);
-  font-style: italic;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
-
-.intervenant-info .learn-more {
-  background-color: var(--accent-color);
-  color: var(--white);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
-}
-
-.intervenant-info .learn-more:hover {
-  background-color: var(--secondary-color);
-}
-
-.intervenant-topic {
-  padding: 1rem;
-  background-color: var(--white);
-  border-top: 3px solid var(--accent-color);
-  margin-top: 1rem;
-  text-align: left;
-}
-
-.intervenant-topic h4 {
-  color: var(--secondary-color);
-  margin-bottom: 0.5rem;
-}
-
-.intervenant-topic p {
-  color: var(--text-color);
-  font-size: 0.9em;
-  line-height: 1.4;
-}
-
-.intervenant-topic.hidden {
-  display: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .intervenant-card {
-      width: 100%; /* Une seule carte par ligne sur les petits écrans */
-  }
 }
