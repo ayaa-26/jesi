@@ -1,22 +1,35 @@
 /* -------------------------------------------------------------------------- */
-/*  1. Global Styles & Variables
+/*  1. Global Styles & Variables                                            */
 /* -------------------------------------------------------------------------- */
 
 :root {
-  /* Primary color palette */
-  --primary-color: #1a237e;     /* Deep Indigo */
-  --secondary-color: #0d47a1;   /* Dark Blue */
-  --accent-color: #2196f3;      /* Vibrant Blue */
-  --success: #4caf50;            /* Green */
-  --warning: #ff9800;            /* Amber */
+  /* Existing Primary color palette */
+  --primary-color: #1a237e;
+  --secondary-color: #0d47a1;
+  --accent-color: #2196f3;
+  --success: #4caf50;
+  --warning: #ff9800;
 
-  /* Text and Background colors */
-  --text-color: #333;           /* Dark Gray */
-  --light-bg: #f5f5f5;          /* Light Gray */
-  --white: #ffffff;             /* White */
+  /* Existing Text and Background colors */
+  --text-color: #333;
+  --light-bg: #f5f5f5;
+  --white: #ffffff;
 
-  /* Shadow */
+  /* Existing Shadow */
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Add new vars from the second CSS */
+  --primary: #2c3e50;
+  --light: #ecf0f1;
+  --spacing: 1rem;
+  --radius: 8px;
+
+  /* Override vars if needed
+     Example: If both css define primary colors then use only one
+     --primary: #1a237e; (from first CSS file) OR
+     --primary: #2c3e50; (from second CSS file)
+     Choose one based on your requirements.
+  */
 }
 
 /* Reset & Base Styles */
@@ -27,17 +40,19 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif; /* Added Arial as fallback */
   line-height: 1.6;
-  color: var(--text-color);
-  background-color: #0a192f; /* Bleu profond comme base */
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h30v30H0V0zM30 30h30v30H30V30z' fill='%2317466e' opacity='0.1'/%3E%3C/svg%3E"); /* Texture low poly bleu-vert */
+  color: var(--primary); /* Use --primary for default text color */
+  background-color: #0a192f;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h30v30H0V0zM30 30h30v30H30V30z' fill='%2317466e' opacity='0.1'/%3E%3C/svg%3E");
   background-attachment: fixed;
   text-align: center;
+  margin: 0; /* Added margin reset */
+  padding: 0; /* Added padding reset */
 }
 
 /* -------------------------------------------------------------------------- */
-/*  2. Header & Navigation
+/*  2. Header & Navigation                                                */
 /* -------------------------------------------------------------------------- */
 
 header {
@@ -48,8 +63,8 @@ header {
   background: var(--white);
   box-shadow: var(--shadow);
   z-index: 1000;
-  transition: all 0.3s ease; /* Smooth transition for changes */
-  padding: 1rem 0; /* Reduced padding for a cleaner look */
+  transition: all 0.3s ease;
+  padding: 1rem 0;
 }
 
 .header-container {
@@ -83,6 +98,13 @@ nav ul {
   display: flex;
   gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;  /* Added from second css  */
+}
+
+nav ul li {
+  margin: 0; /* Added from second css */
 }
 
 nav a {
@@ -91,7 +113,7 @@ nav a {
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav a:hover {
@@ -100,7 +122,7 @@ nav a:hover {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  3. Main Content
+/*  3. Main Content                                                      */
 /* -------------------------------------------------------------------------- */
 
 main {
@@ -131,7 +153,7 @@ section {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  4. Home Page Styles
+/*  4. Home Page Styles                                                   */
 /* -------------------------------------------------------------------------- */
 
 .home-page {
@@ -146,18 +168,19 @@ section {
 .hero {
   text-align: center;
   margin-bottom: 3rem;
-  background: linear-gradient(135deg, rgba(10, 25, 47, 0.7), rgba(33, 150, 243, 0.4)); /* Dégradé bleu profond vers accent bleu */
-  padding: 4rem 2rem; /* Augmente l'espacement pour un effet plus aéré */
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.7), rgba(33, 150, 243, 0.4));
+  padding: 4rem 2rem;
   border-radius: 15px;
   box-shadow: var(--shadow);
-  color: white; /* Assurez-vous que le texte est lisible sur le fond */
+  color: white;
 }
 
 .hero-section h1,
 .hero-section .subtitle,
 .hero-section .date {
-  color: var(--white); /* Utilise la variable pour la couleur blanche */
+  color: var(--white);
 }
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -191,7 +214,7 @@ section {
   width: auto;
   border-radius: 10px;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease;
 }
 
 .organizer-logo:hover {
@@ -227,7 +250,7 @@ section {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  5. Schedule Section
+/*  5. Schedule Section                                                  */
 /* -------------------------------------------------------------------------- */
 
 .schedule {
@@ -271,14 +294,14 @@ section {
   padding: 1.5rem;
   margin-bottom: 1rem;
   transition: transform 0.3s ease, background-color 0.3s ease, border-left-color 0.3s ease;
-  border-left: 4px solid transparent; /* Initial border-left color */
-  text-align: left; /* Revert text alignment for time-slot content */
+  border-left: 4px solid transparent;
+  text-align: left;
 }
 
 .time-slot:hover {
   transform: translateX(10px);
-  background: #e3f2fd; /* Lighter shade on hover */
-  border-left-color: var(--accent-color); /* Border-left on hover */
+  background: #e3f2fd;
+  border-left-color: var(--accent-color);
 }
 
 .time {
@@ -342,7 +365,7 @@ section {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  6. Contact Section
+/*  6. Contact Section                                                    */
 /* -------------------------------------------------------------------------- */
 
 .contact-section {
@@ -423,7 +446,7 @@ section {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  7. Comité d'Organisation Styles
+/*  7. Comité d'Organisation Styles                                          */
 /* -------------------------------------------------------------------------- */
 
 .member-slot {
@@ -438,8 +461,8 @@ section {
 
 .member-slot:hover {
   transform: translateX(5px);
-  background-color: #e3f2fd; /* Lighter shade on hover */
-  border-left: 4px solid var(--accent-color); /* Border-left on hover */
+  background-color: #e3f2fd;
+  border-left: 4px solid var(--accent-color);
 }
 
 .role {
@@ -453,7 +476,7 @@ section {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  8. Intervenants Styles
+/*  8. Intervenants Styles                                                */
 /* -------------------------------------------------------------------------- */
 
 .intervenants-section {
@@ -497,7 +520,7 @@ section {
 }
 
 .intervenant-photo img:hover {
-  transform: scale(1.1); /* Subtle zoom effect on hover */
+  transform: scale(1.1);
 }
 
 .intervenant-info {
@@ -558,7 +581,7 @@ section {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  9. Competition Styles
+/*  9. Competition Styles                                                 */
 /* -------------------------------------------------------------------------- */
 
 h1 {
@@ -626,7 +649,7 @@ button {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  10. Animations
+/*  10. Animations                                                        */
 /* -------------------------------------------------------------------------- */
 
 @keyframes fadeInUp {
@@ -641,7 +664,7 @@ button {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  11. Responsive Design
+/*  11. Responsive Design                                                   */
 /* -------------------------------------------------------------------------- */
 
 @media (max-width: 768px) {
@@ -701,10 +724,40 @@ button {
   .intervenant-card {
     width: 100%; /* One card per row on small screens */
   }
+    /* Header Styles pour écran mobile from second CSS */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul li a {
+        padding: 0.5rem;
+    }
+  /* responsive design from second css */
+  .competences-container {
+        flex-direction: column;
+    }
+
+    .competences-column {
+        padding: 1rem;
+    }
+
+    .partenariats-table th,
+    .partenariats-table td {
+        padding: 1rem;
+    }
+
+    .partenariats-table th {
+        font-size: 0.8rem;
+    }
 }
 
 /* -------------------------------------------------------------------------- */
-/*  12. Print Styles
+/*  12. Print Styles                                                       */
 /* -------------------------------------------------------------------------- */
 
 @media print {
@@ -721,4 +774,372 @@ button {
   .timeline-indicator {
     display: none;
   }
+}
+
+/* Styles from Second CSS *//* Make sure the CSS rules below don't override other rules */
+
+/* image style */
+.filiere-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+}
+
+/* cta button */
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+/* Section Compétences Visées */
+#competences {
+    padding: 4rem var(--spacing);
+    background-color: var(--light);
+}
+
+#competences h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+.competences-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.competences-column {
+    flex: 1;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.competences-column h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.competences-column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.competences-column ul li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--primary);
+}
+
+.competences-column ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* General styles from second CSS  */
+main {
+    padding: 1em;
+}
+
+h2 {
+    color: #004080;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+}
+
+.grid {
+    display: flex;
+    gap: 1em;
+}
+
+.column {
+    flex: 1;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery div {
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Laboratoires Section */
+#laboratoires {
+    padding: 4rem var(--spacing);
+    background-color: var(--light);
+}
+
+#laboratoires h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+/* Carte de laboratoire */
+.lab-card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lab-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image du laboratoire */
+.lab-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--secondary);
+}
+
+/* Contenu de la carte */
+.lab-content {
+    padding: 1.5rem;
+}
+
+.lab-content h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.lab-content p {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.lab-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: var(--primary);
+}
+
+.lab-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Section Partenariats */
+#partenariats {
+    padding: 4rem var(--spacing);
+    background-color: var(--light);
+}
+
+#partenariats h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+/* Tableau des partenariats */
+.table-wrapper {
+    overflow-x: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius);
+    background: white;
+}
+
+.partenariats-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.partenariats-table th,
+.partenariats-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.partenariats-table th {
+    background-color: var(--secondary);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.partenariats-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.partenariats-table ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.partenariats-table ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Section Source PDF */
+#source-pdf {
+    padding: 4rem var(--spacing);
+    background-color: var(--light);
+    text-align: center;
+}
+
+#source-pdf h2 {
+    margin-bottom: 1rem;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+#source-pdf p {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.pdf-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-link:hover {
+    background-color: #2980b9;
+}
+
+/* Styles pour le menu déroulant personnalisé */
+.custom-select {
+    position: relative;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--secondary);
+    border-radius: var(--radius);
+    background-color: white;
+    appearance: none;
+    cursor: pointer;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--secondary);
+    font-size: 0.8rem;
+}
+
+/* Effet au survol */
+.filter-select:hover {
+    border-color: #2980b9;
+}
+
+/* Effet lorsque le menu est ouvert */
+.filter-select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+/* Header styles de base pour le header second css  */
+header {
+    background-color: #ffffff; /* Fond blanc */
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Styles pour la navigation second css */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Espacement égal entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #2c3e50; /* Couleur de texte sombre */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Couleur de texte au survol */
+    background-color: #f0f0f0; /* Fond légèrement gris au survol */
 }
