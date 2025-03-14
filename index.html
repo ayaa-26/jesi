@@ -8,51 +8,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <header>
         <div class="header-container">
             <nav>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="programme.html">Programme</a></li>
-                    <li><a href="indexc.html">Compétition</a></li> <!-- Lien vers la page compétition (à créer si elle n'existe pas) -->
+                    <li><a href="indexc.html">Compétition</a></li>
                     <li><a href="comite.html">Comité d'Organisation</a></li>
                     <li><a href="intervenants.html">Intervenants</a></li>
                 </ul>
             </nav>
         </div>
-        <!-- Ajoutez votre logo ici si vous ne l'avez pas déjà fait -->
     </header>
-
+    
     <main class="home-page">
         <section class="hero">
             <h1>JESI 2025</h1>
             <p class="subtitle">Journée Énergétique et Systèmes Intelligents</p>
+            <p class="countdown">L'événement commence dans <span id="countdown"></span> jours</p>
         </section>
 
         <section class="organizers">
             <h2>Organisée par</h2>
             <div class="organizer-logos">
-                <img src="images./ensaf-logo.png" alt="ENSA Fès" class="organizer-logo">
-                <img src="images./powerup-logo.png" alt="Club Power Up" class="organizer-logo">
-                <img src="images./fsdmf-logo.png" alt="Faculté FSDM" class="organizer-logo">
+                <img src="images/ensaf-logo.png" alt="ENSA Fès" class="organizer-logo">
+                <img src="images/powerup-logo.png" alt="Club Power Up" class="organizer-logo">
+                <img src="images/fsdmf-logo.png" alt="Faculté FSDM" class="organizer-logo">
             </div>
             <p class="description">
-                JESI 2025 est une initiative conjointe de l'Ecole Nationale des Sciences Appliquées de Fes, du club Power Up, et de l'université Sidi Mohammed Ben Abdellah  Fès.
+                JESI 2025 est une initiative conjointe de l'École Nationale des Sciences Appliquées de Fès, du club Power Up et de l'Université Sidi Mohammed Ben Abdellah de Fès.
+            </p>
+        </section>
+
+        <section class="royal-speech">
+            <h2>Vision de Sa Majesté le Roi Mohammed VI</h2>
+            <img src="images./ROIM6.jpg" alt="Roi Mohammed VI" class="royal-image">
+            <p>
+                « Notre pays s'est engagé dans une politique énergétique ambitieuse, visant à promouvoir les énergies renouvelables et à réduire la dépendance aux énergies fossiles. L'avenir de notre économie repose sur une transition énergétique réussie, soutenue par l'innovation et l'intelligence technologique. »
             </p>
         </section>
 
         <section class="energy-paragraph">
             <h2>L'Énergie et les Systèmes Intelligents</h2>
             <p>
-                Dans un monde en constante évolution, la maîtrise de l'énergie et son optimisation grâce aux systèmes intelligents sont devenues des enjeux cruciaux. JESI 2025 vise à explorer les synergies entre ces deux domaines, en mettant en lumière les innovations et les solutions pour un avenir durable. Les systèmes intelligents, grâce à l'analyse de données et à l'automatisation, permettent une gestion plus efficace de l'énergie, réduisant ainsi notre empreinte environnementale et ouvrant la voie à de nouvelles opportunités économiques.
+                Dans un monde en constante évolution, la maîtrise de l'énergie et son optimisation grâce aux systèmes intelligents sont devenues des enjeux cruciaux. JESI 2025 vise à explorer ces synergies en mettant en lumière les innovations et les solutions pour un avenir durable.
             </p>
+            <blockquote>
+                "L'efficacité énergétique n'est pas un choix, c'est une nécessité pour assurer un développement durable et inclusif." – Mohammed VI
+            </blockquote>
         </section>
     </main>
 
     <footer>
-        <!-- (Contenu de votre footer, comme sur votre index.html) -->
+        <p>&copy; 2025 JESI - Tous droits réservés.</p>
     </footer>
-
+    
+    <script>
+        function countdown() {
+            const eventDate = new Date("2025-04-21").getTime(); // Date de l'événement
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+            const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            document.getElementById("countdown").innerText = daysLeft;
+        }
+        countdown();
+    </script>
 </body>
 </html>
