@@ -9,26 +9,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Smooth scroll for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const section = document.querySelector(targetId);
-            const headerHeight = document.querySelector('header').offsetHeight;
-            const elementPosition = section.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+    // // Smooth scroll for navigation links (SUPPRIMÉ)
+    // document.querySelectorAll('nav a').forEach(anchor => {
+    //     anchor.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         const targetId = this.getAttribute('href');
+    //         const section = document.querySelector(targetId);
+    //         const headerHeight = document.querySelector('header').offsetHeight;
+    //         const elementPosition = section.getBoundingClientRect().top;
+    //         const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
+    //         window.scrollTo({
+    //             top: offsetPosition,
+    //             behavior: 'smooth'
+    //         });
 
-            // Update active navigation link
-            document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
+    //         // Update active navigation link
+    //         document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+    //         this.classList.add('active');
+    //     });
+    // });
 
     // Time slots animation on scroll
     const timeSlots = document.querySelectorAll('.time-slot');
