@@ -183,18 +183,18 @@
     </footer>
 
     <script>
-        function toggleIntervenant(button) {
-            const card = button.closest('.intervenant-card');
-            const topic = card.querySelector('.intervenant-topic');
+         function toggleIntervenant(button) {
+    const card = button.closest('.intervenant-card');
+    const topic = card.querySelector('.intervenant-topic');
 
-            if (topic.classList.contains('hidden')) {
-                topic.classList.remove('hidden');
-                button.textContent = 'Show Less';
-            } else {
-                topic.classList.add('hidden');
-                button.textContent = 'Learn More';
-            }
-        }
+    if (topic.style.display === "none" || topic.style.display === "") {
+        topic.style.display = "block";  // Afficher le contenu
+        button.textContent = 'Show Less';  // Modifier le texte du bouton
+    } else {
+        topic.style.display = "none";  // Cacher le contenu
+        button.textContent = 'Learn More';  // Restaurer le texte du bouton
+    }
+}
     </script>
 </body>
 </html>
