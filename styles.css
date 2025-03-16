@@ -37,8 +37,9 @@ nav ul li {
     margin: 0;
 }
 
+/* Styles pour la navigation */
 nav ul li a {
-    color: #2c3e50; /* Couleur de texte sombre */
+    color: #3498db; /* Couleur du texte des liens en bleu */
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -48,8 +49,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #3498db; /* Couleur de texte au survol */
-    background-color: #f0f0f0; /* Fond légèrement gris au survol */
+    color: #ffffff; /* Couleur de texte au survol (blanc) */
+    background-color: #3498db; /* Fond bleu au survol */
 }
 
 /* Styles pour les écrans mobiles */
