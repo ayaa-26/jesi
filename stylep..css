@@ -1,0 +1,158 @@
+/* Style général */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #00509e;
+    padding: 15px 0;
+    color: white;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #00509e, #003f7f);
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+}
+
+.hero-section .subtitle,
+.hero-section .date {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Programme */
+.schedule {
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.section-header h2 {
+    color: #00509e;
+    text-align: center;
+    font-size: 2.2em;
+}
+
+.session-block {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #e3f2fd;
+}
+
+.session-block h3 {
+    color: #003f7f;
+}
+
+.time-slot {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.time {
+    font-weight: bold;
+    width: 150px;
+    color: #00509e;
+}
+
+.event-content {
+    flex: 1;
+}
+
+/* Contact */
+.contact-section {
+    background: #00509e;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-card {
+    background: white;
+    color: #00509e;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.contact-card i {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-form button {
+    background: #003f7f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
