@@ -4,80 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comité d'Organisation - JESI 2025</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers votre fichier CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>JESI 2025 est organisée par le club Power Up</h1>
-        <h2>Comité d'Organisation</h2>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Style pour afficher l'image à côté du membre -->
+    <style>
+        .member-slot {
+            display: flex;
+            align-items: center; /* Alignement vertical au centre */
+            margin-bottom: 10px; /* Espacement entre les membres */
+        }
 
-        <div class="member-slot">
-            <h5 class="role">Présidente:</h5>
-            <p class="name">Messaaoudi F. Zahra</p>
-        </div>
+        .member-slot img {
+            width: 50px;  /* Ajustez la taille de l'image selon vos besoins */
+            height: 50px; /* Ajustez la taille de l'image selon vos besoins */
+            border-radius: 50%; /* Pour une image de profil ronde */
+            margin-right: 10px; /* Espacement entre l'image et le texte */
+            object-fit: cover; /* Empêche la distorsion de l'image */
 
-        <div class="member-slot">
-            <h5 class="role">Vice-président:</h5>
-            <p class="name">Nabil Anouar</p>
-        </div>
+        }
 
-        <div class="member-slot">
-            <h5 class="role">Responsable Média:</h5>
-            <p class="name">Benkarrou Aya, Belaiter Yasmine</p>
-        </div>
-
-        <div class="member-slot">
-            <h5 class="role">Responsable des affaires internes:</h5>
-            <p class="name">Mellouki Mohammed</p>
-        </div>
-
-        <div class="member-slot">
-            <h5 class="role">Responsable des affaires externes:</h5>
-            <p class="name">Kiba Chaimae</p>
-        </div>
-
-        <div class="member-slot">
-            <h5 class="role">Chef de communication:</h5>
-            <p class="name">Nouary Lhoussaine</p>
-        </div>
-
-        <div class="member-slot">
-            <h5 class="role">Chef de protocole:</h5>
-            <p class="name">Ait Benali Meryem</p>
-        </div>
-
-        <div class="member-slot">
-            <h5 class="role">Responsable Design:</h5>
-            <p class="name">Umar Ahmad Farouk</p>
-        </div>
-
-        <div class="member-slot">
-            <h5 class="role">Trésorière:</h5>
-            <p class="name">Lamghari Firdaousse</p>
-        </div>
-
-        <div class="member-slot">
-            <h5 class="role">Chef d’organisation:</h5>
-            <p class="name">Essalhi Nouhayla</p>
-        </div>
-
-        <div class="member-slot">
-            <h5 class="role">Secrétaire générale:</h5>
-            <p class="name">Funga Danny</p>
-        </div>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comité d'Organisation - JESI 2025</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers votre fichier CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Ajout de Font Awesome -->
+        .member-info {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -95,6 +45,7 @@
                     <li><a href="programme.html"><i class="fas fa-calendar-alt"></i> Programme</a></li>
                     <li><a href="indexc.html"><i class="fas fa-trophy"></i> Compétition</a></li>
                     <li><a href="intervenants.html"><i class="fas fa-users"></i> Intervenants</a></li>
+                    <li><a href="orientation.html"><i class="fas fa-users"></i> orientation</a><li>
                 </ul>
             </nav>
         </div>
@@ -105,58 +56,92 @@
         <h2>Comité d'Organisation</h2>
 
         <div class="member-slot">
-            <h5 class="role">Présidente:</h5>
-            <p class="name">Messaaoudi F. Zahra</p>
+            <img src="images./1.png" alt="Photo de Messaaoudi F. Zahra">  <!-- Remplacez par le chemin correct de l'image -->
+            <div class="member-info">
+                <h5 class="role">Présidente:</h5>
+                <p class="name">Messaaoudi F. Zahra</p>
+            </div>
         </div>
 
         <div class="member-slot">
-            <h5 class="role">Vice-président:</h5>
-            <p class="name">Nabil Anouar</p>
+            <img src="images./2.png" alt="Photo de Nabil Anouar">  <!-- Remplacez par le chemin correct de l'image -->
+            <div class="member-info">
+                <h5 class="role">Vice-président:</h5>
+                <p class="name">Nabil Anouar</p>
+            </div>
         </div>
 
         <div class="member-slot">
-            <h5 class="role">Responsable Média:</h5>
-            <p class="name">Benkarrou Aya, Belaiter Yasmine</p>
+            <img src="images./4.png" alt="Photo de Benkarrou Aya">
+            <img src="images./3.png" alt="Photo de Belaiter Yasmine">
+            <div class="member-info">
+                <h5 class="role">Responsable Média:</h5>
+                <p class="name">Benkarrou Aya, Belaiter Yasmine</p>
+            </div>
         </div>
 
         <div class="member-slot">
-            <h5 class="role">Responsable des affaires internes:</h5>
-            <p class="name">Mellouki Mohammed</p>
+            <img src="images./5.png" alt="Photo de Mellouki Mohammed">  <!-- Remplacez par le chemin correct de l'image -->
+            <div class="member-info">
+                <h5 class="role">Responsable des affaires internes:</h5>
+                <p class="name">Mellouki Mohammed</p>
+            </div>
         </div>
 
         <div class="member-slot">
-            <h5 class="role">Responsable des affaires externes:</h5>
-            <p class="name">Kiba Chaimae</p>
+            <img src="images./6.png" alt="Photo de Kiba Chaimae">  <!-- Remplacez par le chemin correct de l'image -->
+             <div class="member-info">
+                <h5 class="role">Responsable des affaires externes:</h5>
+                <p class="name">Kiba Chaimae</p>
+            </div>
         </div>
 
         <div class="member-slot">
-            <h5 class="role">Chef de communication:</h5>
-            <p class="name">Nouary Lhoussaine</p>
+            <img src="images./7.png" alt="Photo de Nouary Lhoussaine">  <!-- Remplacez par le chemin correct de l'image -->
+            <div class="member-info">
+                <h5 class="role">Chef de communication:</h5>
+                <p class="name">Nouary Lhoussaine</p>
+            </div>
         </div>
 
         <div class="member-slot">
-            <h5 class="role">Chef de protocole:</h5>
-            <p class="name">Ait Benali Meryem</p>
+            <img src="images./8.png" alt="Photo de Ait Benali Meryem">  <!-- Remplacez par le chemin correct de l'image -->
+            <div class="member-info">
+                <h5 class="role">Chef de protocole:</h5>
+                <p class="name">Ait Benali Meryem</p>
+            </div>
         </div>
 
         <div class="member-slot">
-            <h5 class="role">Responsable Design:</h5>
-            <p class="name">Umar Ahmad Farouk</p>
+            <img src="images./9.png" alt="Photo de Umar Ahmad Farouk">  <!-- Remplacez par le chemin correct de l'image -->
+             <div class="member-info">
+                <h5 class="role">Responsable Design:</h5>
+                <p class="name">Umar Ahmad Farouk</p>
+             </div>
         </div>
 
         <div class="member-slot">
-            <h5 class="role">Trésorière:</h5>
-            <p class="name">Lamghari Firdaousse</p>
+            <img src="images./10.png" alt="Photo de Lamghari Firdaousse">  <!-- Remplacez par le chemin correct de l'image -->
+            <div class="member-info">
+                <h5 class="role">Trésorière:</h5>
+                <p class="name">Lamghari Firdaousse</p>
+            </div>
         </div>
 
         <div class="member-slot">
-            <h5 class="role">Chef d’organisation:</h5>
-            <p class="name">Essalhi Nouhayla</p>
+            <img src="images./11.png" alt="Photo de Essalhi Nouhayla">  <!-- Remplacez par le chemin correct de l'image -->
+            <div class="member-info">
+                <h5 class="role">Chef d’organisation:</h5>
+                <p class="name">Essalhi Nouhayla</p>
+            </div>
         </div>
 
         <div class="member-slot">
-            <h5 class="role">Secrétaire générale:</h5>
-            <p class="name">Funga Danny</p>
+            <img src="images./12.png" alt="Photo de Funga Danny">  <!-- Remplacez par le chemin correct de l'image -->
+            <div class="member-info">
+                <h5 class="role">Secrétaire générale:</h5>
+                <p class="name">Funga Danny</p>
+            </div>
         </div>
     </div>
 </body>
