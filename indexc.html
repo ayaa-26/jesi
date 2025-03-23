@@ -4,121 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JESI'2025 - Compétition d'Innovation</title>
-    <link rel="stylesheet" href="styla.css"> <!-- Lien vers votre style.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Lien vers Font Awesome -->
-    <style>
-       body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .logo {
-            color: #38b6ff;
-            font-size: 32px;
-            font-weight: bold;
-            text-decoration: underline;
-            margin: 0 15px;
-        }
-
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 18px;
-            color: #38b6ff;
-        }
-
-        .section-content {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-left: 5px solid #38b6ff;
-        }
-
-        .section-content p {
-            margin-bottom: 15px;
-        }
-
-        .learn-more, .conditions-button {
-            cursor: pointer;
-            display: inline-block;
-            background-color: #38b6ff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-        .hidden-content {
-            display: none;
-            margin-bottom: 20px;
-        }
-
-        .criteria ul, .conditions-content ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .criteria li, .conditions-content li {
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .criteria li:before {
-            content: "✅";
-            position: absolute;
-            left: 0;
-        }
-
-        .awards-box {
-            border-left: 3px solid #ff7b00;
-            padding: 10px 20px;
-            background-color: #f9f9f9;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            padding: 5px 10px;
-            border-radius: 3px;
-            text-decoration: none;
-            color: #333;
-            font-size: 14px;
-        }
-        .hero {
-  text-align: center;
-  margin-bottom: 3rem;
-  background: linear-gradient(135deg, rgba(10, 25, 47, 0.7), rgba(33, 150, 243, 0.4)); /* Dégradé bleu profond vers accent bleu */
-  padding: 4rem 2rem;
-  border-radius: 15px;
-  box-shadow: var(--shadow);
-  color: white;
-}
-
-.hero h1,
-.hero .subtitle,
-.hero .countdown {
-  color: white;
-}
-    </style>
+    <link rel="stylesheet" href="styla.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -143,84 +30,85 @@
         </div>
     </header>
 
-    <div class="image-container">
-        <img src="img comp.jpg" alt="Image de la compétition JESI'2025">
-    </div>
+    <main class="competition-section">
+        <!-- Section Hero -->
+        <div class="hero">
+            <h1>Compétition d'Innovation</h1>
+            <p class="subtitle">Participez à la compétition JESI'2025 et montrez vos talents !</p>
+        </div>
 
-    <!-- Nouvelle section : Innovation Challenge -->
-    <div class="section-content">
-        <h2>Innovation Challenge</h2>
-        <p>Dans le cadre de la Journée ‘Énergétique et Systèmes Intelligents’ JESI’2025, l’École Nationale des Sciences Appliquées de Fès organise une compétition au profit des jeunes étudiants et chercheurs Marocains et Étrangers.</p>
-    </div>
+        <!-- Section : Innovation Challenge -->
+        <div class="section-content">
+            <h2>Innovation Challenge</h2>
+            <p>Dans le cadre de la Journée ‘Énergétique et Systèmes Intelligents’ JESI’2025, l’École Nationale des Sciences Appliquées de Fès organise une compétition au profit des jeunes étudiants et chercheurs Marocains et Étrangers.</p>
+        </div>
 
-    <!-- Section : Objectifs de la compétition -->
-    <div class="section-content">
-        <h2>Objectifs de la compétition</h2>
-        <p>Encourager et récompenser les projets innovants qui explorent des solutions concrètes aux défis actuels dans le secteur de l'énergie, en intégrant les nouvelles technologies, la digitalisation et la domotique.</p>
-        <p>Les idées peuvent s'appliquer à divers domaines (habitat intelligent, mobilité, gestion énergétique, etc.), afin de créer un impact transversal sur l'ensemble des secteurs.</p>
+        <!-- Section : Objectifs de la compétition -->
+        <div class="section-content">
+            <h2>Objectifs de la compétition</h2>
+            <p>Encourager et récompenser les projets innovants qui explorent des solutions concrètes aux défis actuels dans le secteur de l'énergie, en intégrant les nouvelles technologies, la digitalisation et la domotique.</p>
+            <p>Les idées peuvent s'appliquer à divers domaines (habitat intelligent, mobilité, gestion énergétique, etc.), afin de créer un impact transversal sur l'ensemble des secteurs.</p>
 
-        <div class="learn-more" onclick="toggleContent()">Learn More</div>
+            <div class="learn-more" onclick="toggleContent()">Learn More</div>
 
-        <div id="hiddenContent" class="hidden-content">
-            <p>La compétition vise à promouvoir des solutions novatrices qui répondent aux défis énergétiques actuels et futurs. Les participants sont encouragés à présenter des projets qui combinent innovation technologique, faisabilité pratique et impact sociétal positif.</p>
-            <p>Les meilleures idées seront non seulement récompensées lors de la cérémonie de remise des prix, mais pourront également bénéficier d'un accompagnement pour leur développement futur.</p>
+            <div id="hiddenContent" class="hidden-content">
+                <p>La compétition vise à promouvoir des solutions novatrices qui répondent aux défis énergétiques actuels et futurs. Les participants sont encouragés à présenter des projets qui combinent innovation technologique, faisabilité pratique et impact sociétal positif.</p>
+                <p>Les meilleures idées seront non seulement récompensées lors de la cérémonie de remise des prix, mais pourront également bénéficier d'un accompagnement pour leur développement futur.</p>
 
-            <div class="criteria">
-                <h3>Critères d'évaluation</h3>
-                <ul>
-                    <li>Innovation et originalité</li>
-                    <li>Faisabilité technique et impact potentiel sur plusieurs secteurs</li>
-                    <li>Clarté et qualité de la présentation</li>
-                    <li>Pertinence par rapport aux enjeux de la digitalisation, de la domotique et de l'optimisation énergétique</li>
-                </ul>
-            </div>
+                <div class="criteria">
+                    <h3>Critères d'évaluation</h3>
+                    <ul>
+                        <li>Innovation et originalité</li>
+                        <li>Faisabilité technique et impact potentiel sur plusieurs secteurs</li>
+                        <li>Clarté et qualité de la présentation</li>
+                        <li>Pertinence par rapport aux enjeux de la digitalisation, de la domotique et de l'optimisation énergétique</li>
+                    </ul>
+                </div>
 
-            <div class="awards">
-                <h3>Remise des prix</h3>
-                <div class="awards-box">
-                    <p>Les meilleurs projets seront récompensés lors d'une cérémonie officielle organisée à l'ENSA de Fès</p>
-                    <p><strong>Date :</strong> Vendredi 21 Avril 2025</p>
-                    <p><strong>Lieu :</strong> École Nationale des Sciences Appliquées - Fès</p>
+                <div class="awards">
+                    <h3>Remise des prix</h3>
+                    <div class="awards-box">
+                        <p>Les meilleurs projets seront récompensés lors d'une cérémonie officielle organisée à l'ENSA de Fès</p>
+                        <p><strong>Date :</strong> Vendredi 21 Avril 2025</p>
+                        <p><strong>Lieu :</strong> École Nationale des Sciences Appliquées - Fès</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Section : Ready to Compete -->
-    <div class="section-content">
-        <h2>Ready to Compete?</h2>
-        <p>Ne manquez pas cette incroyable opportunité de mettre en valeur vos compétences et de résonner avec des leaders de l’industrie. Inscrivez-vous dès maintenant et prenez part à la compétition JESI'2025 !</p>
+        <!-- Section : Ready to Compete -->
+        <div class="section-content">
+            <h2>Ready to Compete?</h2>
+            <p>Ne manquez pas cette incroyable opportunité de mettre en valeur vos compétences et de résonner avec des leaders de l’industrie. Inscrivez-vous dès maintenant et prenez part à la compétition JESI'2025 !</p>
 
-        <div class="conditions-button" onclick="toggleConditions()">Conditions de participation</div>
+            <div class="conditions-button" onclick="toggleConditions()">Conditions de participation</div>
 
-        <div id="conditionsContent" class="hidden-content">
-            <p>Toute personne intéressée doit soumettre sa candidature en renseignant le formulaire ci-après, au plus tard le 15 Avril 2025.</p>
-            <p><strong>Lien :</strong> <a href="https://forms.gle/cdY2XMarcJ12VDR38" target="_blank">https://forms.gle/cdY2XM4nzcJ12VDR38</a></p>
+            <div id="conditionsContent" class="hidden-content">
+                <p>Toute personne intéressée doit soumettre sa candidature en renseignant le formulaire ci-après, au plus tard le 15 Avril 2025.</p>
+                <p><strong>Lien :</strong> <a href="https://forms.gle/cdY2XMarcJ12VDR38" target="_blank">https://forms.gle/cdY2XM4nzcJ12VDR38</a></p>
 
-            <h3>Modalités de participation :</h3>
-            <ul>
-                <li><strong>Qui peut participer ?</strong>
-                    <ul>
-                        <li>Étudiants, chercheurs, start-ups et professionnels passionnés par l'innovation dans le domaine énergétique, électrique et ses applications transversales.</li>
-                    </ul>
-                </li>
-                <li><strong>Format de présentation</strong>
-                    <ul>
-                        <li>Pitch oral de 5 à 10 minutes accompagné d'une présentation visuelle (diaporama, démonstration, prototype, etc.).</li>
-                        <li>Possibilité d'intégrer une démonstration en réalité augmentée ou via une application interactive.</li>
-                    </ul>
-                </li>
-            </ul>
+                <h3>Modalités de participation :</h3>
+                <ul>
+                    <li><strong>Qui peut participer ?</strong>
+                        <ul>
+                            <li>Étudiants, chercheurs, start-ups et professionnels passionnés par l'innovation dans le domaine énergétique, électrique et ses applications transversales.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Format de présentation</strong>
+                        <ul>
+                            <li>Pitch oral de 5 à 10 minutes accompagné d'une présentation visuelle (diaporama, démonstration, prototype, etc.).</li>
+                            <li>Possibilité d'intégrer une démonstration en réalité augmentée ou via une application interactive.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <div class="participate">
-        « Participez et partagez vos idées ! »
-    </div>
-
-    <div style="margin-top: 20px;">
-        <a href="https://forms.gle/cdY2XMarcJ12VDR38" class="btn">Register Now</a>
-    </div>
+        <!-- Bouton d'inscription -->
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://forms.gle/cdY2XMarcJ12VDR38" class="btn">Register Now</a>
+        </div>
+    </main>
 
     <script>
         function toggleContent() {
