@@ -409,11 +409,20 @@ main {
 }
 
 /* Ensure no conflicting styles */
+/* Ajustement spécifique pour le titre principal */
 #hero-challenge h1 {
-    color: white !important;
-    font-family: 'Arial Black', Gadget, sans-serif;
+    margin-top: 30px; /* Ajoute un espace au-dessus du titre */
+    transform: translateY(20px); /* Fait descendre le titre de 20px */
+    /* Conservez vos autres styles existants */
     font-size: 3em;
     margin-bottom: 0.2em;
+    color: white;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+/* Option supplémentaire pour ajuster tout le contenu du héros */
+#hero-challenge > div {
+    transform: translateY(30px); /* Fait descendre tout le contenu */
 }
 h1, h2, h3 {
     color: var(--primary);
@@ -582,4 +591,142 @@ footer p {
     font-size: 1.2rem; /* Description font size */
     line-height: 1.6; /* Line height for readability */
     margin-bottom: 1.5rem; /* Space below the paragraph */
+}
+/* Nouveau CSS pour image réduite */
+.royal-grid {
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr; /* Colonne image réduite */
+    gap: 2rem;
+    align-items: start;
+}
+
+.royal-image-container {
+    width: 100%;
+    aspect-ratio: 1/1; /* Garantit le carré parfait */
+}
+
+.royal-square-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Ajustements texte pour espace réduit */
+.royal-text-container {
+    padding: 0 1rem;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .royal-grid {
+        grid-template-columns: minmax(150px, 200px) 1fr; /* Encore plus réduit */
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .royal-grid {
+        grid-template-columns: 1fr;
+    }
+    .royal-image-container {
+        max-width: 200px; /* Image centrée en mobile */
+        margin: 0 auto;
+    }
+}
+/* Styles pour la section comité */
+/* Styles pour la section comité */
+.comite-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comite-section h1 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.comite-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--secondary);
+}
+
+/* Intro paragraph */
+.intro-paragraph {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    background-color: rgba(52, 152, 219, 0.05);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--secondary);
+}
+
+.intro-paragraph p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--primary);
+    text-align: center;
+}
+
+/* Organisation logos container */
+.organisation-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: var(--radius);
+    max-width: 900px;
+}
+
+/* Logos styles */
+.org-logo {
+    width: 180px; /* Taille fixe pour tous les logos */
+    height: 180px; /* Carré parfait */
+    object-fit: contain;
+    padding: 1rem;
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.org-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .organisation-logos {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .org-logo {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .comite-section h1 {
+        font-size: 1.8rem;
+    }
 }
