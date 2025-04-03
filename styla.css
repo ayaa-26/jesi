@@ -6,7 +6,17 @@
     --spacing: 1rem; /* Espacement général */
     --radius: 8px; /* Rayon des bordures */
 }
+.innovdom-image {
+    text-align: center;
+    margin: 20px 0;
+}
 
+.innovdom-image img {
+    max-width: 80%; /* Ajuste la taille si nécessaire */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
 /* Reset de base */
 * {
     margin: 0;
@@ -398,6 +408,13 @@ main {
     margin: 0 auto;
 }
 
+/* Ensure no conflicting styles */
+#hero-challenge h1 {
+    color: white !important;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 3em;
+    margin-bottom: 0.2em;
+}
 h1, h2, h3 {
     color: var(--primary);
 }
@@ -415,6 +432,14 @@ h2 {
 h3 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
+}
+
+h1.innovdom-title {
+    color: white; /* Ensure the title color is white */
+    font-family: 'Arial Black', Gadget, sans-serif; /* Update font */
+    font-size: 2.5rem; /* Adjust font size if necessary */
+    text-align: center; /* Center align the title */
+    margin-bottom: 1.5rem; /* Add spacing below the title */
 }
 
 /* Section Styles */
@@ -534,4 +559,27 @@ footer p {
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+}
+
+.innovdom-section {
+    background-color: var(--primary); /* Background color for the section */
+    color: white; /* Text color */
+    padding: 2rem; /* Padding around the content */
+    text-align: center; /* Center align the text */
+    border-radius: var(--radius); /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    margin-bottom: 2rem; /* Space below the section */
+}
+
+.innovdom-section h1 {
+    font-family: 'Arial Black', Gadget, sans-serif; /* Bold font for the title */
+    font-size: 2.5rem; /* Title font size */
+    margin-bottom: 1rem; /* Space below the title */
+}
+
+.innovdom-section p {
+    font-family: 'Segoe UI', system-ui, sans-serif; /* Font for the description */
+    font-size: 1.2rem; /* Description font size */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 1.5rem; /* Space below the paragraph */
 }
