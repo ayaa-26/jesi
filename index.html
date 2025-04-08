@@ -123,12 +123,14 @@
         }
 
         /* Effet au survol */
-        .organizer-logos img,
-        .partner-logos img {
-            height: 60px;
-            margin: 15px;
-            vertical-align: middle;
-        }
+        .organizer-logos img {
+        max-height: 100px; /* Limit the height */
+        max-width: 150px; /* Limit the width */
+        width: auto; /* Maintain aspect ratio */
+        height: auto; /* Maintain aspect ratio */
+        margin: 10px;
+        vertical-align: middle;
+    }
 
         .royal-image {
             max-width: 150px;
@@ -249,7 +251,7 @@
             <p>
                 Nous invitons les <strong>étudiants</strong>, <strong>chercheurs</strong>, <strong>start-ups</strong> et
                 <strong>professionnels</strong> passionnés par l'innovation dans le domaine énergétique, électrique et leurs applications
-                transversales à participer. [cite: 5]
+                transversales à participer. 
             </p>
             <div style="margin-top: 20px; font-size: 2em; color: #ccc;">
                 <i class="fas fa-users"></i>
@@ -260,44 +262,79 @@
             <h2>Organisée Dans le Cadre de JESI'2025 par</h2>
             <div class="organizer-logos">
                 <img src="images./ensaf-logo.png" alt="ENSA Fès" class="organizer-logo">
-                <img src="images./fsdmf-logo.png" alt="Université Sidi Mohammed Ben Abdellah" class="organizer-logo">
+                <img src="images./GESI-logo.png" alt="Génie Energetique et Systemes Intelegents" class="organizer-logo">
                 <img src="images./powerup-logo.png" alt="Club Power Up" class="organizer-logo">
             </div>
-            <p>
-                Une initiative de l'École Nationale des Sciences Appliquées de Fès et de l'Université Sidi Mohammed Ben Abdellah, <br>
-                sous l'égide de la Journée Énergétique et Systèmes Intelligents (JESI'2025).
-            </p>
             <p style="margin-top: 10px;">
-                <span style="display: inline-block; margin-right: 15px;">Filière GESI</span>
-                <span style="display: inline-block;">Club Power Up</span>
+                <span style="display: inline-block; margin-right: 15px;">ENSAF    |</span>
+                <span style="display: inline-block; margin-right: 15px;">USMBA    |</span>
+                <span style="display: inline-block; margin-right: 15px;">Filière GESI    |</span>
+                <span style="display: inline-block; margin-right: 15px;">Club Power Up    |</span>
+
             </p>
+            <p>
+                <br>
+                Une initiative portée par la filière GESI, en collaboration avec l'École Nationale des Sciences Appliquées de Fès et l’Université Sidi Mohammed Ben Abdellah, 
+                organisée dans le cadre de la Journée Énergétique et Systèmes Intelligents (JESI'2025).
+            </p>
+
         </section>
 
     </main>
+</section>
+<section class="contact-section">
+<h2>Contactez-Nous</h2>
+<div class="contact-info">
+    <div class="contact-card">
+        <i class="fas fa-phone-alt"></i>
+        <p><strong>Pr. HIHI Hicham</strong></p>
+        <p>Email : <a href="mailto:hicham.hihi@usmba.ac.ma">hicham.hihi@usmba.ac.ma</a></p>
+        <p>Tél. : 06.00.30.12.76</p>
+    </div>
+    <div class="contact-card">
+        <i class="fas fa-phone-alt"></i>
+        <p><strong>NOUARY Lhoussaine</strong></p>
+        <p>Responsable Communication</p>
+        <p>Email : <a href="mailto:lhoussaine.nouary@usmba.ac.ma">lhoussaine.nouary@usmba.ac.ma</a></p>
+        <p>Tél. : 06.24.80.98.71</p>
+    </div>
+    <div class="contact-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>ENSA Fès, Maroc</p>
+    </div>
+</div>
 
-    <footer>
-        <p><strong>Innov'Dom Challenge | JESI 2025</strong></p>
-
-        <div class="partner-logos">
-            <p>Avec le soutien de :</p>
-            <img src="images./logo-ingelec.png" alt="Ingelec">
-            <img src="images./logo-powergreen.png" alt="Power Green Energy">
-            <img src="images./logo-radeef.png" alt="RADEEF">
-            <img src="images./logo-masterteo.png" alt="Master TEO">
-            <img src="images./logo-mastertec.png" alt="Master TEC">
+</section>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>JESI'2025</h3>
+            <p>21 Avril 2025 - ENSA Fès</p>
+            <p>Une initiative pour l'innovation et le développement durable.</p>
         </div>
-
-        <p>
-            <a href="http://www.ensaf.ac.ma" target="_blank">Site Web ENSA Fès</a>
-        </p>
-        <p>
-            <strong>Contact Compétition :</strong><br>
-            Pr. HIHI Hicham, ENSA Fès, Maroc <br>
-            Email : <a href="mailto:hicham.hihi@usmba.ac.ma">hicham.hihi@usmba.ac.ma</a> | Tél.: 06.00.30.12.76 [cite: 12]
-        </p>
+        <div class="footer-section">
+            <h3>Navigation</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="orientation.html">Orientation</a></li>
+                <li><a href="indexc.html">Compétition</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:hicham.hihi@usmba.ac.ma">hicham.hihi@usmba.ac.ma</a></p>
+            <p>Tél.: 06.00.30.12.76</p>
+            <p>Email: <a href="mailto:lhoussaine.nouary@usmba.ac.ma">lhoussaine.nouary@usmba.ac.ma</a></p>
+            <p>Tél.: 06.24.80.98.71</p>
+            <p>Email: <a href="mailto:fatimaezzahra.messaaoudi@usmba.ac.ma">fatimaezzahra.messaaoudi@usmba.ac.ma</a></p>
+            <p>Tél.: 06.48.26.51.02</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
         <p>&copy; 2025 ENSA Fès / USMBA - Tous droits réservés.</p>
-    </footer>
-
+        <p><a href="http://www.ensaf.ac.ma" target="_blank">Site Web ENSA Fès</a></p>
+    </div>
+</footer>
 </body>
-
 </html>
