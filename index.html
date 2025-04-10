@@ -6,41 +6,13 @@
     <title>Programme Provisoire - JESI'2025</title>
     <link rel="stylesheet" href="styla.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="images./JESI 2025.png" alt="Logo Energétique et Systèmes Intelligents">
-                <div class="logo-text">
-                    JESI <br>
-                    2025
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="programme.html">Programme</a></li>
-                       <li><a href="orientation.html">Orientation</a></li>
-                    <li><a href="indexc.html">Compétition</a></li>
-                    <li><a href="comite.html">Comité d'Organisation</a></li>
-                    <li><a href="intervenants.html">Intervenants</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innov'Dom Challenge - Connecter à l'Avenir (JESI 2025)</title>
-    <link rel="stylesheet" href="styla.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="styleshefont-family: 'Arial', sans-serifet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/workspaces/jesi/particles.js" defer></script>
     <style>
         /* Quelques styles de base pour structurer (à mettre/adapter dans styla.css) */
         body {
-            font-family: sans-serif;
+            font-family: 'Arial', sans-serif; /* Replace with your desired font */
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -183,10 +155,38 @@
             filter: brightness(0) invert(1);
             /* Logos blancs sur fond sombre */
         }
+
+        /* Additional styles for particle background */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     </style>
 </head>
-
 <body>
+    <div id="particles-js"></div>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images./JESI 2025.png" alt="Logo Energétique et Systèmes Intelligents">
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="orientation.html">Orientation</a></li>
+                    <li><a href="indexc.html">Compétition</a></li>
+                    <li><a href="comite.html">Comité d'Organisation</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main class="innovdom-home">
 
@@ -336,5 +336,47 @@
         <p><a href="http://www.ensaf.ac.ma" target="_blank">Site Web ENSA Fès</a></p>
     </div>
 </footer>
+<script>
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 100, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffa500" }, // Orange color for particles
+            shape: {
+                type: "circle",
+                stroke: { width: 0, color: "#000000" },
+                polygon: { nb_sides: 5 }
+            },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, distance: 150, color: "#ffa500", opacity: 0.4, width: 1 }, // Orange links
+            move: {
+                enable: true,
+                speed: 6,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: { enable: false, rotateX: 600, rotateY: 1200 }
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: { enable: true, mode: "repulse" },
+                onclick: { enable: true, mode: "push" },
+                resize: true
+            },
+            modes: {
+                grab: { distance: 400, line_linked: { opacity: 1 } },
+                bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                repulse: { distance: 200, duration: 0.4 },
+                push: { particles_nb: 4 },
+                remove: { particles_nb: 2 }
+            }
+        },
+        retina_detect: true
+    });
+</script>
 </body>
 </html>
